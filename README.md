@@ -1,5 +1,4 @@
-# network-analysis-webapp 
-
-# usage
-# $ pip install streamlit
-# $ streamlit run dashboard.py
+# Dashboard - Data crawling from stackexchange forum
+# Run
+$ pip install streamlit <br />
+$ streamlit run dashboard.py <br />
