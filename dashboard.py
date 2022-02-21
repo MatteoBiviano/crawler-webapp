@@ -5,12 +5,9 @@ def main():
 	st.sidebar.title("Menu")
 	analysis_selbox = st.sidebar.selectbox(
 		'',
-		["Home", "Data Crawling", "Network Analysis"], index = 0)
+		["Data Crawling"], index = 0)
 	if(analysis_selbox == "Data Crawling"):
 		crawl_data(st)
-	if(analysis_selbox == "Network Analysis"):
-		net_analysis(st)
-
 
 
 if __name__ == '__main__':
