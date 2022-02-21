@@ -1,0 +1,2 @@
+StackAPI==0.2.0
+streamlit==1.5.1
