@@ -1,5 +1,4 @@
 from stackapi import StackAPI
-from datetime import datetime
 import calendar
 import json
 import os
@@ -44,9 +43,14 @@ def crawl_data(st):
 		date_start = st.date_input('Start date')
 		date_end = st.date_input('End date')
 
-		type_data = st.selectbox('Select what type of data', ["answers", "badges", "collectives", "comments", "posts", "questions", "tags"])
+		type_data = st.selectbox('Select what type of data', ["answers", "articles","badges", "collectives", "comments", "posts", "questions", "tags", "users"])
 
-		is_sorted = st.radio("Which type of sorting?", ["votes", "activity", "added"])
+		st.subheader("Optional parameters")
+
+		is_sorted = st.text_input("(Optional) Insert type of sorting*")
+		st.markdown("*Respect to the defined data type, you can insert 'votes', 'activity' or 'added' as sorting method. \
+					Not every kind of data have this type of sorting. For more information on sorting, read the specific <a href=https://api.stackexchange.com/docs/> documentation </a> of the data type", unsafe_allow_html = True)
+
 		
 		filters = st.text_input("(Optional) Insert filter for data you want to crawl*")
 		
@@ -64,9 +68,15 @@ def crawl_data(st):
 					SITE.page_size = 100
 					SITE.max_pages = n_record/100
 					if len(filters)>0:
-						data = SITE.fetch(type_data, filter = filters, fromdate =  calendar.timegm(date_start.timetuple()), todate = calendar.timegm(date_end.timetuple()), sort = is_sorted)			
+						if len(is_sorted) > 0:
+							data = SITE.fetch(type_data, filter = filters, fromdate =  calendar.timegm(date_start.timetuple()), todate = calendar.timegm(date_end.timetuple()), sort = is_sorted)
+						else: 
+							data = SITE.fetch(type_data, filter = filters, fromdate =  calendar.timegm(date_start.timetuple()), todate = calendar.timegm(date_end.timetuple()))			
 					else:
-						data = SITE.fetch(type_data, fromdate =  calendar.timegm(date_start.timetuple()), todate = calendar.timegm(date_end.timetuple()), sort = is_sorted)
+						if len(is_sorted) > 0:
+							data = SITE.fetch(type_data, fromdate =  calendar.timegm(date_start.timetuple()), todate = calendar.timegm(date_end.timetuple()), sort = is_sorted)
+						else:
+							data = SITE.fetch(type_data, fromdate =  calendar.timegm(date_start.timetuple()), todate = calendar.timegm(date_end.timetuple()))
 				with open(f"data_{name_code[forum]}_{type_data}.json", "w") as jsonF:
 					json.dump(data, jsonF)
 					st.success("File Stored")
