@@ -8,7 +8,7 @@ pip install stackapi==0.2.0
 ```
 # Run
 ```
-$ streamlit run dashboard.py
+streamlit run dashboard.py
 ```
 
 ### Overview Dashboard
