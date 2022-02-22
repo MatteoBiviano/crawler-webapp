@@ -13,14 +13,14 @@ $ streamlit run dashboard.py
 
 ### Overview Dashboard
 <p align=center>
-    <img src="form_app.png" width="440" height="331">
+    <img src="form_app.png">
 </p>
 
 
 ### Clone the repo
 Get a copy of this repo using git clone
 ```
-git clone https://github.com//stackexchange-crawler-webapp.git
+git clone https://github.com/MatteoBiviano/stackexchange-crawler-webapp.git
 ```
 
 
