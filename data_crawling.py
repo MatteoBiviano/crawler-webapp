@@ -43,7 +43,7 @@ def crawl_data(st):
 		date_start = st.date_input('Start date')
 		date_end = st.date_input('End date')
 
-		type_data = st.selectbox('Select what type of data', ["answers", "badges", "collectives", "comments", "posts", "questions", "tags", "users"])
+		type_data = st.selectbox('Select what type of data', ["answers", "badges", "comments", "posts", "questions", "tags", "users"])
 
 		st.subheader("Optional parameters")
 
