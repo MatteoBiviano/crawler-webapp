@@ -21,6 +21,7 @@ name_code = {
 	"Seasoned Advice":"cooking",
 	"Server Fault":"serverfault",
 	"SharePoint": "sharepoint",
+	"StackOverflow": "stackoverflow",
 	"Super User": "superuser",
 	"Travel":"travel",
 	"WorldBuilding":"worldbuilding"
