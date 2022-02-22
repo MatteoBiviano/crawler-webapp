@@ -1,6 +1,5 @@
 import streamlit as st
 from data_crawling import *
-from network_analysis import *
 def main():
 	st.sidebar.title("Menu")
 	analysis_selbox = st.sidebar.selectbox(
