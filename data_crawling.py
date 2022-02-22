@@ -47,12 +47,12 @@ def crawl_data(st):
 
 		st.subheader("Optional parameters")
 
-		is_sorted = st.text_input("(Optional) Insert type of sorting*")
+		is_sorted = st.text_input("Insert type of sorting*")
 		st.markdown("*Respect to the defined data type, you can insert 'votes', 'activity' or 'added' as sorting method. \
 					Not every kind of data have this type of sorting. For more information on sorting, read the specific <a href=https://api.stackexchange.com/docs/> documentation </a> of the data type", unsafe_allow_html = True)
 
 		
-		filters = st.text_input("(Optional) Insert filter for data you want to crawl*")
+		filters = st.text_input("Insert filter for data you want to crawl*")
 		
 		st.markdown("*Create filter searching data type on <a href=https://api.stackexchange.com/docs/>api link</a> then edit the filter field", unsafe_allow_html = True)
 
