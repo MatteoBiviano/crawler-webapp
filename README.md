@@ -2,7 +2,7 @@
 ### Getting Started
 
 ### Install packages
-```
+```python
 pip install streamlit==1.5.1
 pip install stackapi==0.2.0
 ```
