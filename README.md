@@ -5,6 +5,10 @@
 ```
 pip install streamlit==1.5.1
 pip install stackapi==0.2.0
+pip install feedparser==6.0.8
+pip install pandas==1.3.5
+pip install Pillow==9.0.1
+pip install PyGithub==1.55
 ```
 ### Run
 ```
