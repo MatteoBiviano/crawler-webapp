@@ -1,21 +1,28 @@
 # Dashboard - Data crawling from stackexchange forum
 ### Getting Started
 
-### Install packages
+### Install Julia packages
 ```
-pip install streamlit==1.5.1
-pip install stackapi==0.2.0
+add CSV
+add DataFrames
+add JSON
 ```
-### Run
+### Install Python packages
 ```
-streamlit run dashboard.py
+pip install Julia
 ```
 
-### Overview Dashboard
-<p align=center>
-    <img src="form_app.png">
-</p>
+### Run from python
+```
+python test_call.py
+```
+or include this in your code
+```
+from julia import Main
+Main.include("polytree_events.jl")
 
+Main.event_analysis("nodes.csv", "edges.csv")
+```
 
 ### Clone the repo
 Get a copy of this repo using git clone
