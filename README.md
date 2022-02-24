@@ -24,5 +24,5 @@ streamlit run dashboard.py
 ### Clone the repo
 Get a copy of this repo using git clone
 ```
-git clone https://github.com/MatteoBiviano/stackexchange-crawler-webapp.git
+git clone https://github.com/MatteoBiviano/crawler-webapp.git
 ```
