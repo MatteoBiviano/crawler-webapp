@@ -1,4 +1,4 @@
-# Dashboard - Data crawling from stackexchange forum
+# Dashboard - Data crawling
 ### Getting Started
 
 ### Install packages
@@ -15,7 +15,7 @@ pip install PyGithub==1.55
 streamlit run dashboard.py
 ```
 
-### Overview Dashboard
+### Example dashboard overview
 <p align=center>
     <img src="form_app.png">
 </p>
