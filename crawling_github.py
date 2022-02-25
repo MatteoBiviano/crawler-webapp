@@ -54,9 +54,9 @@ def crawl_github(st):
 						repo_language.append(repo.language)
 						repo_forks.append(repo.forks_count)
 						it = it + 1
-						if it == 3000: #Max 3k repo for user
+						if it == 2000: #Max 3k repo for user
 							break
-						if it%200 == 0: #Max 200 it every 10 secs
+						if it%50 == 0: #Max 200 it every 10 secs
 							time.sleep(10)
 
 				df = pd.DataFrame({'Name': repo_name, 'Owner': repo_owner, 'Language': repo_language, 'Stars': repo_stargazers_count, 'Forks': repo_forks})
